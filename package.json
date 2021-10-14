@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prerelease": "rimraf ./dist/",
-    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register; cp -rf templates dist",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
     "prepublishOnly": "yarn release"
   },
   "devDependencies": {
