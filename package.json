@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/theyear/create-ty-rc-app.git"
   },
+  "main": "dist/index.js",
   "bin": {
     "create-ty-rc-app": "./dist/index.js"
   },
