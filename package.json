@@ -1,6 +1,6 @@
 {
   "name": "create-ty-rc-app",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-alpha.5",
   "keywords": [
     "react",
     "webpack",
@@ -17,13 +17,10 @@
   "bin": {
     "create-ty-rc-app": "./dist/index.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsc && cp -rf ./templates ./dist/",
     "prerelease": "rimraf ./dist/",
-    "release": "yarn build"
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register; cp -rf templates dist",
+    "prepublishOnly": "yarn release"
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.2",
@@ -31,6 +28,7 @@
     "@types/prompts": "2.0.1",
     "@types/rimraf": "3.0.0",
     "@types/validate-npm-package-name": "3.0.0",
+    "@vercel/ncc": "^0.31.1",
     "chalk": "2.4.2",
     "commander": "2.20.0",
     "copyfiles": "^2.4.1",

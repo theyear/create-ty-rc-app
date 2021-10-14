@@ -1,6 +1,14 @@
 node_modules
 .DS_Store
-dist
+
+/templates
+/helpers
+index.ts
+create-app.ts
+rollup.config.js
+
+.*ignore
+.prettierrc
 
 npm-debug.log*
 yarn-debug.log*
