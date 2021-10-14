@@ -1,0 +1,15 @@
+{
+  "useTabs": false,
+  "printWidth": 120,
+  "tabWidth": 4,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["**/*.json", ".prettierrc"],
+      "options": {
+        "parser": "json",
+        "tabWidth": 2
+      }
+    }
+  ]
+}
